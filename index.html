@@ -252,8 +252,6 @@
     [data-theme="dark"] .stage-badge--m { background: #451a03; color: var(--color-accent-m); border-color: #5c2a08; }
     [data-theme="dark"] .stage-badge--b { background: #450a0a; color: var(--color-accent-b); border-color: #5c1212; }
     .section__title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); letter-spacing: -0.03em; line-height: var(--line-height-tight); color: var(--color-text); margin-bottom: var(--space-3); }
-    .section__subtitle { font-size: var(--font-size-lg); font-weight: var(--font-weight-normal); color: var(--color-text-secondary); margin-bottom: var(--space-2); }
-    .section__tagline { font-size: var(--font-size-md); color: var(--color-primary); font-weight: var(--font-weight-medium); }
     .section__description { font-size: var(--font-size-md); color: var(--color-text-secondary); line-height: var(--line-height-snug); }
     .section__body { }
     .placeholder-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--space-4); padding: var(--space-16) var(--space-8); border: 2px dashed var(--color-border); border-radius: var(--radius-xl); background: var(--color-bg-subtle); text-align: center; }
@@ -297,7 +295,6 @@
     @media (max-width: 480px) {
       .content { padding: var(--space-5) var(--space-4) var(--space-6); }
       .section__title { font-size: var(--font-size-xl); }
-      .section__subtitle { font-size: var(--font-size-base); }
     }
     /* ---------------------------------------------------------------
        6. UTILITIES
@@ -324,41 +321,8 @@
        DESIGN SYSTEM — Utilities
        ================================================ */
     .u-text-center { text-align: center; }
-    .u-text-right { text-align: right; }
     .u-text-sm { font-size: var(--font-size-sm); }
-    .u-text-xs { font-size: var(--font-size-xs); }
     .u-text-muted { color: var(--color-text-secondary); }
-    .u-text-tertiary { color: var(--color-text-tertiary); }
-    .u-font-medium { font-weight: var(--font-weight-medium); }
-    .u-font-semibold { font-weight: var(--font-weight-semibold); }
-    .u-font-bold { font-weight: var(--font-weight-bold); }
-    .u-mt-2 { margin-top: var(--space-2); }
-    .u-mt-3 { margin-top: var(--space-3); }
-    .u-mt-4 { margin-top: var(--space-4); }
-    .u-mt-6 { margin-top: var(--space-6); }
-    .u-mt-8 { margin-top: var(--space-8); }
-    .u-mb-2 { margin-bottom: var(--space-2); }
-    .u-mb-4 { margin-bottom: var(--space-4); }
-    .u-mb-6 { margin-bottom: var(--space-6); }
-    .u-gap-2 { gap: var(--space-2); }
-    .u-gap-3 { gap: var(--space-3); }
-    .u-gap-4 { gap: var(--space-4); }
-    .u-flex { display: flex; }
-    .u-flex-wrap { flex-wrap: wrap; }
-    .u-flex-col { flex-direction: column; }
-    .u-items-center { align-items: center; }
-    .u-justify-between { justify-content: space-between; }
-    .u-grid { display: grid; }
-    .u-grid-2 { grid-template-columns: repeat(2, 1fr); }
-    .u-grid-3 { grid-template-columns: repeat(3, 1fr); }
-    .u-grid-4 { grid-template-columns: repeat(4, 1fr); }
-    @media (max-width: 768px) {
-      .u-grid-2, .u-grid-3, .u-grid-4 { grid-template-columns: 1fr; }
-    }
-    @media (min-width: 769px) and (max-width: 1024px) {
-      .u-grid-3 { grid-template-columns: repeat(2, 1fr); }
-      .u-grid-4 { grid-template-columns: repeat(2, 1fr); }
-    }
 
     /* ================================================
        DESIGN SYSTEM — Buttons
@@ -369,75 +333,19 @@
     .btn--primary:hover { background: var(--color-primary-hover); border-color: var(--color-primary-hover); box-shadow: var(--shadow-sm); }
     .btn--secondary { background: var(--color-bg-subtle); color: var(--color-text); border-color: var(--color-border); }
     .btn--secondary:hover { background: var(--color-border-light); border-color: var(--color-border); }
-    .btn--ghost { background: transparent; color: var(--color-text-secondary); }
-    .btn--ghost:hover { background: var(--color-bg-subtle); color: var(--color-text); }
     .btn--outline { background: transparent; color: var(--color-primary); border-color: var(--color-primary); }
     .btn--outline:hover { background: var(--color-primary-light); }
-    .btn--danger { background: var(--color-danger); color: #fff; border-color: var(--color-danger); }
-    .btn--danger:hover { opacity: 0.9; box-shadow: var(--shadow-sm); }
     .btn--sm { padding: var(--space-1) var(--space-3); font-size: var(--font-size-xs); border-radius: var(--radius-sm); }
     .btn--lg { padding: var(--space-3) var(--space-8); font-size: var(--font-size-base); border-radius: var(--radius-lg); }
-    .btn--icon { width: 36px; height: 36px; padding: 0; border-radius: var(--radius-md); }
     .btn--icon.btn--sm { width: 28px; height: 28px; }
     .btn--icon.btn--lg { width: 44px; height: 44px; border-radius: var(--radius-lg); }
     .btn:disabled, .btn--disabled { opacity: 0.45; cursor: not-allowed; pointer-events: none; }
-    .btn--loading { color: transparent !important; pointer-events: none; }
-    .btn--loading::after { content: ''; position: absolute; width: 16px; height: 16px; border: 2px solid currentColor; border-right-color: transparent; border-radius: 50%; animation: ds-spin 600ms linear infinite; color: var(--color-text-inverse); }
     .btn--outline.btn--loading::after, .btn--ghost.btn--loading::after, .btn--secondary.btn--loading::after { color: var(--color-text); }
-
-    /* ================================================
-       DESIGN SYSTEM — Hero
-       ================================================ */
-    .hero { padding: var(--space-16) 0 var(--space-12); }
-    .hero--compact { padding: var(--space-10) 0 var(--space-8); }
-    .hero__content { max-width: 640px; }
-    .hero__title { font-size: var(--font-size-3xl); font-weight: var(--font-weight-extrabold); letter-spacing: -0.03em; line-height: var(--line-height-tight); margin-bottom: var(--space-4); color: var(--color-text); }
-    .hero__subtitle { font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--space-3); line-height: var(--line-height-snug); }
-    .hero__description { font-size: var(--font-size-base); color: var(--color-text-secondary); line-height: var(--line-height-normal); margin-bottom: var(--space-8); max-width: 540px; }
-    .hero__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
-    .hero__illustration { margin-top: var(--space-10); width: 100%; aspect-ratio: 16/7; background: var(--color-bg-subtle); border: 2px dashed var(--color-border); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; color: var(--color-text-tertiary); font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); }
-    @media (min-width: 900px) {
-      .hero--split { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-12); align-items: center; }
-      .hero--split .hero__illustration { margin-top: 0; aspect-ratio: 1/1; max-width: 400px; justify-self: end; }
-    }
 
     /* ================================================
        DESIGN SYSTEM — Cards
        ================================================ */
     .card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-6); transition: box-shadow var(--transition-base), border-color var(--transition-base), transform var(--transition-base); }
-    .card--hover:hover { box-shadow: var(--shadow-md); border-color: var(--color-border); transform: translateY(-2px); }
-    .card--interactive { cursor: pointer; }
-    .card--interactive:hover { box-shadow: var(--shadow-md); border-color: var(--color-border); transform: translateY(-2px); }
-    .card--interactive:active { transform: translateY(0); }
-    .card--selected { border-color: var(--color-primary); box-shadow: 0 0 0 1px var(--color-primary), var(--shadow-sm); }
-    .card--flat { border: none; box-shadow: var(--shadow-sm); }
-    .card__header { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-3); margin-bottom: var(--space-3); }
-    .card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; background: var(--color-primary-light); color: var(--color-primary); flex-shrink: 0; }
-    .card__title { font-size: var(--font-size-md); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-2); line-height: var(--line-height-snug); }
-    .card__text { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .card__footer { margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
-    .card--expandable .card__expand-content { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow), opacity var(--transition-base); opacity: 0; }
-    .card--expandable.card--expanded .card__expand-content { max-height: 600px; opacity: 1; }
-    .card--expandable .card__expand-trigger svg { transition: transform var(--transition-base); }
-    .card--expandable.card--expanded .card__expand-trigger svg { transform: rotate(180deg); }
-
-    /* ================================================
-       DESIGN SYSTEM — Accordion
-       ================================================ */
-    .accordion { border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; background: var(--color-bg-elevated); }
-    .accordion__item { border-bottom: 1px solid var(--color-border-light); }
-    .accordion__item:last-child { border-bottom: none; }
-    .accordion__trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--space-4) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); text-align: left; cursor: pointer; transition: background var(--transition-fast); gap: var(--space-3); background: transparent; border: none; font-family: inherit; }
-    .accordion__trigger:hover { background: var(--color-bg-subtle); }
-    .accordion__trigger-icon { flex-shrink: 0; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; color: var(--color-text-tertiary); transition: transform var(--transition-base), color var(--transition-base); }
-    .accordion__item--open .accordion__trigger { color: var(--color-primary); }
-    .accordion__item--open .accordion__trigger-icon { transform: rotate(180deg); color: var(--color-primary); }
-    .accordion__panel { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .accordion__panel-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .accordion--nested .accordion { margin: var(--space-3) 0; border-radius: var(--radius-md); }
-    .accordion--borderless { border: none; background: transparent; }
-    .accordion--borderless .accordion__item { border-bottom: 1px solid var(--color-border-light); }
-    .accordion--borderless .accordion__trigger { padding-left: 0; padding-right: 0; }
 
     /* ================================================
        DESIGN SYSTEM — Tabs
@@ -459,130 +367,15 @@
        ================================================ */
     .timeline { position: relative; padding-left: var(--space-8); }
     .timeline::before { content: ''; position: absolute; left: 11px; top: 4px; bottom: 4px; width: 2px; background: var(--color-border); border-radius: 2px; }
-    .timeline__item { position: relative; padding-bottom: var(--space-8); }
-    .timeline__item:last-child { padding-bottom: 0; }
-    .timeline__dot { position: absolute; left: calc(-1 * var(--space-8) + 3px); top: 4px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--color-border); background: var(--color-bg-elevated); z-index: 1; transition: border-color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast); }
-    .timeline__item--active .timeline__dot { border-color: var(--color-primary); background: var(--color-primary); box-shadow: 0 0 0 4px var(--color-primary-light); }
-    .timeline__item--completed .timeline__dot { border-color: var(--color-primary); background: var(--color-primary); }
-    .timeline__item--completed .timeline__dot::after { content: ''; position: absolute; top: 50%; left: 50%; width: 6px; height: 6px; background: #fff; border-radius: 50%; transform: translate(-50%, -50%); }
-    .timeline__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-1); }
-    .timeline__text { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .timeline__label { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-bottom: var(--space-1); font-weight: var(--font-weight-medium); }
-    .timeline--horizontal { display: flex; padding-left: 0; overflow-x: auto; gap: 0; scrollbar-width: none; }
-    .timeline--horizontal::-webkit-scrollbar { display: none; }
-    .timeline--horizontal::before { display: none; }
-    .timeline--horizontal .timeline__item { flex: 0 0 auto; padding-bottom: 0; display: flex; flex-direction: column; align-items: center; min-width: 140px; position: relative; }
-    .timeline--horizontal .timeline__connector { width: 100%; height: 2px; background: var(--color-border); position: absolute; top: 13px; left: calc(50% + 13px); right: calc(-50% + 13px); }
-    .timeline--horizontal .timeline__item:last-child .timeline__connector { display: none; }
-    .timeline--horizontal .timeline__dot { position: static; flex-shrink: 0; margin-bottom: var(--space-3); }
-    .timeline--horizontal .timeline__content { text-align: center; max-width: 120px; }
-    .timeline--progress::before { background: linear-gradient(to bottom, var(--color-primary) var(--progress, 0%), var(--color-border) var(--progress, 0%)); }
-
-    /* ================================================
-       DESIGN SYSTEM — Progress Components
-       ================================================ */
-    .progress-track { width: 100%; }
-    .progress-track__label { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-2); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); }
-    .progress-track__label-text { color: var(--color-text-secondary); }
-    .progress-track__label-value { color: var(--color-text-tertiary); }
     .progress-track__bar { width: 100%; height: 8px; background: var(--color-bg-subtle); border-radius: var(--radius-full); overflow: hidden; }
-    .progress-track__bar--sm { height: 4px; }
-    .progress-track__bar--lg { height: 12px; }
     .progress-track__fill { height: 100%; background: var(--color-primary); border-radius: var(--radius-full); transition: width var(--transition-slow); }
-    .progress-track__fill--striped { background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%); background-size: 16px 16px; animation: ds-stripe 600ms linear infinite; }
-    .progress-circle { position: relative; display: inline-flex; align-items: center; justify-content: center; }
-    .progress-circle svg { transform: rotate(-90deg); }
-    .progress-circle__bg { fill: none; stroke: var(--color-bg-subtle); }
-    .progress-circle__fill { fill: none; stroke: var(--color-primary); stroke-linecap: round; transition: stroke-dashoffset var(--transition-slow); }
-    .progress-circle__label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: var(--font-size-sm); font-weight: var(--font-weight-bold); color: var(--color-text); }
-    .completion-indicator { display: inline-flex; align-items: center; gap: var(--space-2); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); }
-    .completion-indicator--complete { background: var(--color-success-bg); color: var(--color-success); }
-    .completion-indicator--partial { background: var(--color-warning-bg); color: var(--color-warning); }
-    .completion-indicator--empty { background: var(--color-bg-subtle); color: var(--color-text-tertiary); }
 
     /* ================================================
        DESIGN SYSTEM — Career Ladder
        ================================================ */
     .ladder { position: relative; }
-    .ladder__level { position: relative; padding-left: var(--space-10); padding-bottom: var(--space-4); }
-    .ladder__level:last-child { padding-bottom: 0; }
-    .ladder__line { position: absolute; left: 15px; top: 0; bottom: 0; width: 2px; background: var(--color-border); }
-    .ladder__level:last-child .ladder__line { display: none; }
-    .ladder__node { position: absolute; left: 5px; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: var(--color-bg-elevated); border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; z-index: 1; transition: all var(--transition-base); }
-    .ladder__level--active .ladder__node { border-color: var(--color-primary); background: var(--color-primary); color: #fff; box-shadow: 0 0 0 4px var(--color-primary-light); }
-    .ladder__level--completed .ladder__node { border-color: var(--color-primary); background: var(--color-primary); color: #fff; }
-    .ladder__content { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-4) var(--space-5); cursor: pointer; transition: all var(--transition-base); }
-    .ladder__content:hover { box-shadow: var(--shadow-sm); border-color: var(--color-border); }
-    .ladder__level--active .ladder__content { border-color: var(--color-primary); box-shadow: 0 0 0 1px var(--color-primary); }
-    .ladder__level-header { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); }
-    .ladder__level-title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); }
-    .ladder__level-subtitle { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: var(--space-1); }
-    .ladder__level-details { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow), opacity var(--transition-base); opacity: 0; }
-    .ladder__level--expanded .ladder__level-details { max-height: 400px; opacity: 1; margin-top: var(--space-3); padding-top: var(--space-3); border-top: 1px solid var(--color-border-light); }
-    .ladder__level-details p { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .ladder__expand-icon { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .ladder__level--expanded .ladder__expand-icon { transform: rotate(180deg); }
-
-    /* ================================================
-       DESIGN SYSTEM — Statistics Cards
-       ================================================ */
-    .stat-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-5); text-align: center; }
-    .stat-card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--space-3); background: var(--color-primary-light); color: var(--color-primary); }
-    .stat-card__number { font-size: var(--font-size-2xl); font-weight: var(--font-weight-extrabold); color: var(--color-text); letter-spacing: -0.02em; line-height: var(--line-height-tight); }
-    .stat-card__label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text-secondary); margin-top: var(--space-1); }
-    .stat-card__description { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: var(--space-2); line-height: var(--line-height-normal); }
-
-    /* ================================================
-       DESIGN SYSTEM — Callout Boxes
-       ================================================ */
-    .callout { display: flex; gap: var(--space-3); padding: var(--space-4) var(--space-5); border-radius: var(--radius-lg); border-left: 3px solid; font-size: var(--font-size-sm); line-height: var(--line-height-normal); }
-    .callout__icon { flex-shrink: 0; width: 20px; height: 20px; margin-top: 1px; }
-    .callout__content { flex: 1; min-width: 0; }
-    .callout__title { font-weight: var(--font-weight-semibold); margin-bottom: var(--space-1); }
-    .callout--info { background: var(--color-info-bg); border-color: var(--color-info); color: var(--color-info); }
-    .callout--info .callout__title { color: var(--color-info); }
-    .callout--info .callout__content { color: var(--color-text-secondary); }
-    .callout--tip { background: var(--color-tip-bg); border-color: var(--color-tip); color: var(--color-tip); }
-    .callout--tip .callout__title { color: var(--color-tip); }
-    .callout--tip .callout__content { color: var(--color-text-secondary); }
-    .callout--warning { background: var(--color-warning-bg); border-color: var(--color-warning); color: var(--color-warning); }
-    .callout--warning .callout__title { color: var(--color-warning); }
-    .callout--warning .callout__content { color: var(--color-text-secondary); }
-    .callout--success { background: var(--color-success-bg); border-color: var(--color-success); color: var(--color-success); }
-    .callout--success .callout__title { color: var(--color-success); }
-    .callout--success .callout__content { color: var(--color-text-secondary); }
-    .callout--quote { background: var(--color-quote-bg); border-color: var(--color-quote-border); border-left-width: 3px; }
-    .callout--quote .callout__content { color: var(--color-text-secondary); font-style: italic; }
-    .callout--quote .callout__attribution { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: var(--space-2); font-style: normal; font-weight: var(--font-weight-medium); }
-
-    /* ================================================
-       DESIGN SYSTEM — Resource Cards
-       ================================================ */
-    .resource-card { display: flex; align-items: flex-start; gap: var(--space-4); background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-5); transition: all var(--transition-base); }
-    .resource-card:hover { box-shadow: var(--shadow-sm); border-color: var(--color-border); }
-    .resource-card__icon { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; background: var(--color-bg-subtle); color: var(--color-text-tertiary); }
-    .resource-card__body { flex: 1; min-width: 0; }
-    .resource-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-1); }
-    .resource-card__text { font-size: var(--font-size-xs); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .resource-card__action { flex-shrink: 0; }
-    .resource-card--download .resource-card__icon { background: var(--color-primary-light); color: var(--color-primary); }
-    .resource-card--external .resource-card__icon { background: var(--color-info-bg); color: var(--color-info); }
-    .resource-card--checklist .resource-card__icon { background: var(--color-success-bg); color: var(--color-success); }
-    .resource-card--template .resource-card__icon { background: var(--color-tip-bg); color: var(--color-tip); }
-
-    /* ================================================
-       DESIGN SYSTEM — Modal
-       ================================================ */
-    .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 2000; display: flex; align-items: center; justify-content: center; padding: var(--space-6); opacity: 0; visibility: hidden; transition: opacity var(--transition-base), visibility var(--transition-base); backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px); }
     .modal-overlay--open { opacity: 1; visibility: visible; }
-    .modal { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-xl); box-shadow: var(--shadow-lg); width: 100%; max-width: 520px; max-height: 85vh; display: flex; flex-direction: column; transform: translateY(12px) scale(0.97); transition: transform var(--transition-base); }
     .modal-overlay--open .modal { transform: translateY(0) scale(1); }
-    .modal__header { display: flex; align-items: center; justify-content: space-between; padding: var(--space-5) var(--space-6); border-bottom: 1px solid var(--color-border-light); flex-shrink: 0; }
-    .modal__title { font-size: var(--font-size-md); font-weight: var(--font-weight-semibold); color: var(--color-text); }
-    .modal__close { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-sm); color: var(--color-text-tertiary); transition: background var(--transition-fast), color var(--transition-fast); }
-    .modal__close:hover { background: var(--color-bg-subtle); color: var(--color-text); }
-    .modal__body { padding: var(--space-6); overflow-y: auto; flex: 1; font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .modal__footer { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-3); padding: var(--space-4) var(--space-6); border-top: 1px solid var(--color-border-light); flex-shrink: 0; }
 
     /* ================================================
        DESIGN SYSTEM — FAB
@@ -604,33 +397,11 @@
        DESIGN SYSTEM — Stepper
        ================================================ */
     .stepper { display: flex; align-items: flex-start; }
-    .stepper__step { flex: 1; display: flex; flex-direction: column; align-items: center; position: relative; }
-    .stepper__step:not(:last-child)::after { content: ''; position: absolute; top: 16px; left: calc(50% + 16px); right: calc(-50% + 16px); height: 2px; background: var(--color-border); transition: background var(--transition-base); }
-    .stepper__step--completed:not(:last-child)::after { background: var(--color-primary); }
-    .stepper__step--active:not(:last-child)::after { background: linear-gradient(to right, var(--color-primary) 50%, var(--color-border) 50%); }
-    .stepper__circle { width: 32px; height: 32px; border-radius: 50%; border: 2px solid var(--color-border); background: var(--color-bg-elevated); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-xs); font-weight: var(--font-weight-semibold); color: var(--color-text-tertiary); transition: all var(--transition-base); z-index: 1; cursor: default; }
-    .stepper__step--active .stepper__circle { border-color: var(--color-primary); color: var(--color-primary); box-shadow: 0 0 0 4px var(--color-primary-light); }
-    .stepper__step--completed .stepper__circle { border-color: var(--color-primary); background: var(--color-primary); color: #fff; }
-    .stepper__label { margin-top: var(--space-2); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-text-tertiary); text-align: center; transition: color var(--transition-fast); max-width: 80px; }
-    .stepper__step--active .stepper__label { color: var(--color-primary); font-weight: var(--font-weight-semibold); }
-    .stepper__step--completed .stepper__label { color: var(--color-text-secondary); }
-    .stepper--clickable .stepper__circle { cursor: pointer; }
-    .stepper--clickable .stepper__circle:hover { border-color: var(--color-primary); }
 
     /* ================================================
        DESIGN SYSTEM — Checklist
        ================================================ */
     .checklist { }
-    .checklist__item { display: flex; align-items: flex-start; gap: var(--space-3); padding: var(--space-3) 0; border-bottom: 1px solid var(--color-border-light); }
-    .checklist__item:last-child { border-bottom: none; }
-    .checklist__checkbox { flex-shrink: 0; width: 20px; height: 20px; border-radius: var(--radius-sm); border: 2px solid var(--color-border); background: var(--color-bg-elevated); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all var(--transition-fast); margin-top: 1px; }
-    .checklist__checkbox:hover { border-color: var(--color-primary); }
-    .checklist__item--checked .checklist__checkbox { background: var(--color-primary); border-color: var(--color-primary); }
-    .checklist__checkbox svg { opacity: 0; transform: scale(0.5); transition: all var(--transition-fast); color: #fff; }
-    .checklist__item--checked .checklist__checkbox svg { opacity: 1; transform: scale(1); }
-    .checklist__text { font-size: var(--font-size-sm); color: var(--color-text); transition: color var(--transition-fast); line-height: var(--line-height-normal); }
-    .checklist__item--checked .checklist__text { color: var(--color-text-tertiary); text-decoration: line-through; }
-    .checklist__progress { margin-top: var(--space-3); }
 
     /* ================================================
        DESIGN SYSTEM — Badge System
@@ -639,105 +410,15 @@
     .badge--status-active { background: var(--color-success-bg); color: var(--color-success); }
     .badge--status-pending { background: var(--color-warning-bg); color: var(--color-warning); }
     .badge--status-inactive { background: var(--color-bg-subtle); color: var(--color-text-tertiary); }
-    .badge--status-error { background: var(--color-danger-bg); color: var(--color-danger); }
-    .badge--skill { background: var(--color-primary-light); color: var(--color-primary); }
-    .badge--level-1 { background: var(--color-info-bg); color: var(--color-info); }
-    .badge--level-2 { background: var(--color-tip-bg); color: var(--color-tip); }
-    .badge--level-3 { background: var(--color-warning-bg); color: var(--color-warning); }
-    .badge--level-4 { background: var(--color-success-bg); color: var(--color-success); }
-    .badge--level-5 { background: var(--color-danger-bg); color: var(--color-danger); }
     .badge--category { background: var(--color-bg-subtle); color: var(--color-text-secondary); border: 1px solid var(--color-border-light); }
     .badge--dot::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: currentColor; flex-shrink: 0; }
-
-    /* ================================================
-       DESIGN SYSTEM — Input Components
-       ================================================ */
-    .input-group { display: flex; flex-direction: column; gap: var(--space-1); }
-    .input-group__label { font-size: var(--font-size-sm); font-weight: var(--font-weight-medium); color: var(--color-text); }
-    .input-group__hint { font-size: var(--font-size-xs); color: var(--color-text-tertiary); }
-    .input-field { width: 100%; padding: var(--space-2) var(--space-3); border: 1.5px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg-elevated); font-family: inherit; font-size: var(--font-size-sm); color: var(--color-text); transition: border-color var(--transition-fast), box-shadow var(--transition-fast); outline: none; }
-    .input-field::placeholder { color: var(--color-text-tertiary); }
-    .input-field:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px var(--color-primary-light); }
-    .input-field--error { border-color: var(--color-danger); }
-    .input-field--error:focus { box-shadow: 0 0 0 3px var(--color-danger-bg); }
-    .input-field--sm { padding: var(--space-1) var(--space-2); font-size: var(--font-size-xs); }
-    .input-field--lg { padding: var(--space-3) var(--space-4); font-size: var(--font-size-base); }
-    .select-field { appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239ca3b0' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right var(--space-3) center; padding-right: var(--space-8); }
     .toggle { position: relative; display: inline-flex; align-items: center; gap: var(--space-2); cursor: pointer; }
-    .toggle__input { position: absolute; opacity: 0; width: 0; height: 0; }
-    .toggle__track { width: 40px; height: 22px; background: var(--color-border); border-radius: var(--radius-full); transition: background var(--transition-fast); position: relative; }
-    .toggle__track::after { content: ''; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform var(--transition-fast); box-shadow: var(--shadow-xs); }
-    .toggle__input:checked + .toggle__track { background: var(--color-primary); }
-    .toggle__input:checked + .toggle__track::after { transform: translateX(18px); }
-    .toggle__input:focus-visible + .toggle__track { outline: 2px solid var(--color-primary); outline-offset: 2px; }
-    .toggle__label { font-size: var(--font-size-sm); color: var(--color-text-secondary); }
-    .radio-group, .checkbox-group { display: flex; flex-direction: column; gap: var(--space-2); }
-    .radio-item, .checkbox-item { display: flex; align-items: center; gap: var(--space-3); cursor: pointer; font-size: var(--font-size-sm); color: var(--color-text); }
-    .radio-item input, .checkbox-item input { display: none; }
-    .radio-item__circle { width: 20px; height: 20px; border-radius: 50%; border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; transition: border-color var(--transition-fast); flex-shrink: 0; }
-    .radio-item__circle::after { content: ''; width: 10px; height: 10px; border-radius: 50%; background: var(--color-primary); transform: scale(0); transition: transform var(--transition-fast); }
-    .radio-item input:checked ~ .radio-item__circle { border-color: var(--color-primary); }
-    .radio-item input:checked ~ .radio-item__circle::after { transform: scale(1); }
-    .checkbox-item__box { width: 20px; height: 20px; border-radius: var(--radius-sm); border: 2px solid var(--color-border); display: flex; align-items: center; justify-content: center; transition: all var(--transition-fast); flex-shrink: 0; }
-    .checkbox-item__box svg { opacity: 0; transform: scale(0.5); transition: all var(--transition-fast); color: #fff; }
-    .checkbox-item input:checked ~ .checkbox-item__box { background: var(--color-primary); border-color: var(--color-primary); }
-    .checkbox-item input:checked ~ .checkbox-item__box svg { opacity: 1; transform: scale(1); }
-    .radio-item input:focus-visible ~ .radio-item__circle, .checkbox-item input:focus-visible ~ .checkbox-item__box { outline: 2px solid var(--color-primary); outline-offset: 2px; }
-
-    /* ================================================
-       DESIGN SYSTEM — Empty State
-       ================================================ */
-    .empty-state { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-16) var(--space-8); }
-    .empty-state__illustration { width: 120px; height: 120px; background: var(--color-bg-subtle); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-6); color: var(--color-text-tertiary); }
-    .empty-state__title { font-size: var(--font-size-md); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-2); }
-    .empty-state__description { font-size: var(--font-size-sm); color: var(--color-text-secondary); max-width: 360px; line-height: var(--line-height-normal); margin-bottom: var(--space-6); }
-
-    /* ================================================
-       DESIGN SYSTEM — Loading Components
-       ================================================ */
-    .skeleton { background: var(--color-bg-subtle); border-radius: var(--radius-md); position: relative; overflow: hidden; }
-    .skeleton::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%); transform: translateX(-100%); animation: ds-shimmer 1.5s infinite; }
-    [data-theme="dark"] .skeleton::after { background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%); }
-    .skeleton--text { height: 14px; margin-bottom: var(--space-2); }
-    .skeleton--text:last-child { width: 60%; }
-    .skeleton--title { height: 24px; width: 50%; margin-bottom: var(--space-4); }
-    .skeleton--avatar { width: 40px; height: 40px; border-radius: 50%; }
-    .skeleton--card { height: 160px; border-radius: var(--radius-lg); }
-    .skeleton--rect { height: 80px; }
-    .spinner { width: 24px; height: 24px; border: 2.5px solid var(--color-border); border-top-color: var(--color-primary); border-radius: 50%; animation: ds-spin 600ms linear infinite; }
-    .spinner--sm { width: 16px; height: 16px; border-width: 2px; }
-    .spinner--lg { width: 40px; height: 40px; border-width: 3px; }
-    .progress-loader { width: 200px; height: 3px; background: var(--color-bg-subtle); border-radius: var(--radius-full); overflow: hidden; }
-    .progress-loader::after { content: ''; display: block; width: 40%; height: 100%; background: var(--color-primary); border-radius: var(--radius-full); animation: ds-loader 1.2s ease infinite; }
-
-    /* ================================================
-       DESIGN SYSTEM — Tooltip
-       ================================================ */
-    .tooltip { position: relative; display: inline-flex; }
-    .tooltip__trigger { cursor: help; }
-    .tooltip__bubble { position: absolute; z-index: 3000; padding: var(--space-2) var(--space-3); background: var(--color-text); color: var(--color-bg); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); border-radius: var(--radius-md); white-space: nowrap; pointer-events: none; opacity: 0; transform: scale(0.95); transition: opacity var(--transition-fast), transform var(--transition-fast); line-height: var(--line-height-snug); }
-    .tooltip__bubble::after { content: ''; position: absolute; width: 6px; height: 6px; background: var(--color-text); transform: rotate(45deg); }
-    .tooltip--top .tooltip__bubble { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%) scale(0.95); }
-    .tooltip--top .tooltip__bubble::after { bottom: -3px; left: 50%; margin-left: -3px; }
-    .tooltip--bottom .tooltip__bubble { top: calc(100% + 8px); left: 50%; transform: translateX(-50%) scale(0.95); }
-    .tooltip--bottom .tooltip__bubble::after { top: -3px; left: 50%; margin-left: -3px; }
-    .tooltip--left .tooltip__bubble { right: calc(100% + 8px); top: 50%; transform: translateY(-50%) scale(0.95); }
-    .tooltip--left .tooltip__bubble::after { right: -3px; top: 50%; margin-top: -3px; }
-    .tooltip--right .tooltip__bubble { left: calc(100% + 8px); top: 50%; transform: translateY(-50%) scale(0.95); }
-    .tooltip--right .tooltip__bubble::after { left: -3px; top: 50%; margin-top: -3px; }
-    .tooltip--visible .tooltip__bubble { opacity: 1; transform: translateX(-50%) scale(1); }
-    .tooltip--left.tooltip--visible .tooltip__bubble { transform: translateY(-50%) scale(1); }
-    .tooltip--right.tooltip--visible .tooltip__bubble { transform: translateY(-50%) scale(1); }
 
     /* ================================================
        DESIGN SYSTEM — Showcase Container
        ================================================ */
     .ds-showcase__group { margin-bottom: var(--space-12); }
     .ds-showcase__label { font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); color: var(--color-text-tertiary); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-4); padding-bottom: var(--space-2); border-bottom: 1px solid var(--color-border-light); }
-    .ds-showcase__row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: flex-start; margin-bottom: var(--space-4); }
-    .ds-showcase__row:last-child { margin-bottom: 0; }
-    .ds-showcase__col { flex: 1; min-width: 200px; }
-    .ds-showcase__grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: var(--space-4); margin-bottom: var(--space-4); }
 
     /* ================================================
        DESIGN SYSTEM — Keyframes
@@ -749,56 +430,54 @@
     @keyframes ds-stripe { to { background-position: 16px 0; } }
 
     /* ================================================
-       DESIGN SYSTEM — Chapter Sticky Sub-Nav
-       Single shared definition for every per-chapter
-       sticky sub-navigation bar (Career Awareness,
-       Ladder Mapping, Individual Assessment, Mentoring
-       & Mobility, Building the Future, Appendices; the
-       Career Dashboard reuses the .ca-* classes). The
-       per-chapter class names are kept as a grouped
-       selector list so existing markup and the scroll-
-       spy JS — which derives the chapter prefix from
-       the class name — keep working unchanged. Active-
-       state colours are defined just below.
+       DESIGN SYSTEM — Sticky Sub-Nav
+       Single shared component for every chapter's sticky
+       sub-navigation bar (Career Awareness, Ladder
+       Mapping, Individual Assessment, Mentoring &
+       Mobility, Building the Future, Appendices; the
+       Career Dashboard reuses it too). All of them use
+       one class name: .sticky-nav / .sticky-nav__item.
+       Building the Future opts into a red active accent
+       via the .sticky-nav--danger modifier on its nav
+       container.
        ================================================ */
-    .ca-sticky-nav, .lm-sticky-nav, .ia-sticky-nav, .mm-sticky-nav, .bf-sticky-nav, .ap-sticky-nav { position: sticky; top: calc(var(--progress-bar-height) + var(--breadcrumb-height) + 8px); z-index: 100; background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4); margin-bottom: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-2); box-shadow: var(--shadow-sm); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
-    .ca-sticky-nav__item, .lm-sticky-nav__item, .ia-sticky-nav__item, .mm-sticky-nav__item, .bf-sticky-nav__item, .ap-sticky-nav__item { font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-text-tertiary); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); transition: all var(--transition-fast); cursor: pointer; white-space: nowrap; }
-    .ca-sticky-nav__item:hover, .lm-sticky-nav__item:hover, .ia-sticky-nav__item:hover, .mm-sticky-nav__item:hover, .bf-sticky-nav__item:hover, .ap-sticky-nav__item:hover { background: var(--color-bg-subtle); color: var(--color-text); }
-    /* Active state: green accent for all chapters; Building the Future keeps its red accent. */
-    .ca-sticky-nav__item--active, .lm-sticky-nav__item--active, .ia-sticky-nav__item--active, .mm-sticky-nav__item--active, .ap-sticky-nav__item--active { background: var(--color-primary-light); color: var(--color-primary); font-weight: var(--font-weight-semibold); }
-    [data-theme="dark"] .ca-sticky-nav__item--active, [data-theme="dark"] .lm-sticky-nav__item--active, [data-theme="dark"] .ia-sticky-nav__item--active, [data-theme="dark"] .mm-sticky-nav__item--active, [data-theme="dark"] .ap-sticky-nav__item--active { background: var(--color-primary-light); color: var(--color-primary); }
-    .bf-sticky-nav__item--active { background: var(--color-danger-bg); color: var(--color-accent-b); font-weight: var(--font-weight-semibold); }
-    [data-theme="dark"] .bf-sticky-nav__item--active { background: var(--color-danger-bg); color: var(--color-accent-b); }
+    .sticky-nav { position: sticky; top: calc(var(--progress-bar-height) + var(--breadcrumb-height) + 8px); z-index: 100; background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-3) var(--space-4); margin-bottom: var(--space-8); display: flex; flex-wrap: wrap; gap: var(--space-2); box-shadow: var(--shadow-sm); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .sticky-nav__item { font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-text-tertiary); padding: var(--space-1) var(--space-3); border-radius: var(--radius-full); transition: all var(--transition-fast); cursor: pointer; white-space: nowrap; }
+    .sticky-nav__item:hover { background: var(--color-bg-subtle); color: var(--color-text); }
+    /* Active state: green accent by default; the .sticky-nav--danger modifier switches it to red (Building the Future). */
+    .sticky-nav__item--active { background: var(--color-primary-light); color: var(--color-primary); font-weight: var(--font-weight-semibold); }
+    [data-theme="dark"] .sticky-nav__item--active { background: var(--color-primary-light); color: var(--color-primary); }
+    .sticky-nav--danger .sticky-nav__item--active { background: var(--color-danger-bg); color: var(--color-accent-b); }
+    [data-theme="dark"] .sticky-nav--danger .sticky-nav__item--active { background: var(--color-danger-bg); color: var(--color-accent-b); }
 
     /* ================================================
        DESIGN SYSTEM — Chapter Feature Card
-       Single shared definition for the expandable
-       feature cards used by Career Awareness, Ladder
-       Mapping, Individual Assessment and Mentoring &
-       Mobility. Per-chapter class names are retained as
-       grouped selectors so markup and the accordion JS
-       (which references .*-feature-card by name) keep
-       working unchanged. Two intentional per-chapter
-       deltas are preserved verbatim: Individual
-       Assessment uses a 600px expanded max-height (vs
-       800px elsewhere) and has no bulleted-list styles.
+       Single shared component for the expandable feature
+       cards used by Career Awareness, Ladder Mapping,
+       Individual Assessment and Mentoring & Mobility.
+       All four chapters use one class name,
+       .chapter-feature-card (distinct from the landing
+       page's static .feature-card). Individual Assessment
+       caps its expanded height slightly lower via the
+       .chapter-feature-card--compact modifier (600px vs
+       the default 800px); everything else is identical.
        ================================================ */
-    .ca-feature-card, .lm-feature-card, .ia-feature-card, .mm-feature-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-5); transition: all var(--transition-base); cursor: pointer; position: relative; overflow: hidden; }
-    .ca-feature-card:hover, .lm-feature-card:hover, .ia-feature-card:hover, .mm-feature-card:hover { box-shadow: var(--shadow-md); border-color: var(--color-border); transform: translateY(-2px); }
-    .ca-feature-card__icon, .lm-feature-card__icon, .ia-feature-card__icon, .mm-feature-card__icon { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3); flex-shrink: 0; }
-    .ca-feature-card__title, .lm-feature-card__title, .ia-feature-card__title, .mm-feature-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-1); }
-    .ca-feature-card__preview, .lm-feature-card__preview, .ia-feature-card__preview, .mm-feature-card__preview { font-size: var(--font-size-xs); color: var(--color-text-secondary); line-height: var(--line-height-normal); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-    .ca-feature-card__expand, .lm-feature-card__expand, .ia-feature-card__expand, .mm-feature-card__expand { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow), opacity var(--transition-base), margin var(--transition-base); opacity: 0; margin-top: 0; }
-    .ca-feature-card--expanded .ca-feature-card__expand, .lm-feature-card--expanded .lm-feature-card__expand, .mm-feature-card--expanded .mm-feature-card__expand { max-height: 800px; opacity: 1; margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); }
-    .ia-feature-card--expanded .ia-feature-card__expand { max-height: 600px; opacity: 1; margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); }
-    .ca-feature-card__expand p, .lm-feature-card__expand p, .ia-feature-card__expand p, .mm-feature-card__expand p { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); margin-bottom: var(--space-2); }
-    .ca-feature-card__expand p:last-child, .lm-feature-card__expand p:last-child, .ia-feature-card__expand p:last-child, .mm-feature-card__expand p:last-child { margin-bottom: 0; }
-    .ca-feature-card__expand ul, .lm-feature-card__expand ul, .mm-feature-card__expand ul { list-style: disc; padding-left: var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .ca-feature-card__expand ul li, .lm-feature-card__expand ul li, .mm-feature-card__expand ul li { margin-bottom: var(--space-1); }
-    .ca-feature-card__trigger, .lm-feature-card__trigger, .ia-feature-card__trigger, .mm-feature-card__trigger { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-primary); margin-top: var(--space-3); transition: color var(--transition-fast); }
-    .ca-feature-card__trigger:hover, .lm-feature-card__trigger:hover, .ia-feature-card__trigger:hover, .mm-feature-card__trigger:hover { color: var(--color-primary-hover); }
-    .ca-feature-card__trigger svg, .lm-feature-card__trigger svg, .ia-feature-card__trigger svg, .mm-feature-card__trigger svg { transition: transform var(--transition-base); }
-    .ca-feature-card--expanded .ca-feature-card__trigger svg, .lm-feature-card--expanded .lm-feature-card__trigger svg, .ia-feature-card--expanded .ia-feature-card__trigger svg, .mm-feature-card--expanded .mm-feature-card__trigger svg { transform: rotate(180deg); }
+    .chapter-feature-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-5); transition: all var(--transition-base); cursor: pointer; position: relative; overflow: hidden; }
+    .chapter-feature-card:hover { box-shadow: var(--shadow-md); border-color: var(--color-border); transform: translateY(-2px); }
+    .chapter-feature-card__icon { width: 44px; height: 44px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; margin-bottom: var(--space-3); flex-shrink: 0; }
+    .chapter-feature-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); margin-bottom: var(--space-1); }
+    .chapter-feature-card__preview { font-size: var(--font-size-xs); color: var(--color-text-secondary); line-height: var(--line-height-normal); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    .chapter-feature-card__expand { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow), opacity var(--transition-base), margin var(--transition-base); opacity: 0; margin-top: 0; }
+    .chapter-feature-card--expanded .chapter-feature-card__expand { max-height: 800px; opacity: 1; margin-top: var(--space-4); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); }
+    .chapter-feature-card--compact.chapter-feature-card--expanded .chapter-feature-card__expand { max-height: 600px; }
+    .chapter-feature-card__expand p { font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); margin-bottom: var(--space-2); }
+    .chapter-feature-card__expand p:last-child { margin-bottom: 0; }
+    .chapter-feature-card__expand ul { list-style: disc; padding-left: var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
+    .chapter-feature-card__expand ul li { margin-bottom: var(--space-1); }
+    .chapter-feature-card__trigger { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--font-size-xs); font-weight: var(--font-weight-medium); color: var(--color-primary); margin-top: var(--space-3); transition: color var(--transition-fast); }
+    .chapter-feature-card__trigger:hover { color: var(--color-primary-hover); }
+    .chapter-feature-card__trigger svg { transition: transform var(--transition-base); }
+    .chapter-feature-card--expanded .chapter-feature-card__trigger svg { transform: rotate(180deg); }
 
     /* ================================================
        DESIGN SYSTEM — Chapter Summary Outcomes list
@@ -987,7 +666,7 @@
     @media (min-width: 640px) { .ca-feature-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .ca-feature-grid { grid-template-columns: repeat(3, 1fr); } }
 
-    /* .ca-feature-card — unified in the Design System (Chapter Feature Card) */
+    /* Career Awareness feature cards use .chapter-feature-card (Design System) */
 
     .ca-explorer-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-3); }
     @media (min-width: 640px) { .ca-explorer-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -1004,22 +683,8 @@
     .ca-explorer-item__panel-inner ul li { margin-bottom: var(--space-1); }
 
     .ca-pathway-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
-    @media (min-width: 640px) { .ca-pathway-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .ca-pathway-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .ca-pathway-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); }
-    .ca-pathway-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); cursor: pointer; transition: background var(--transition-fast); border: none; background: none; width: 100%; text-align: left; font-family: inherit; }
-    .ca-pathway-card__header:hover { background: var(--color-bg-subtle); }
-    .ca-pathway-card__icon { width: 36px; height: 36px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .ca-pathway-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
-    .ca-pathway-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .ca-pathway-card--open .ca-pathway-card__arrow { transform: rotate(180deg); }
-    .ca-pathway-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .ca-pathway-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .ca-pathway-card__body-inner p { margin-bottom: var(--space-2); }
-    .ca-pathway-card__body-inner ul { list-style: disc; padding-left: var(--space-5); margin-bottom: var(--space-2); }
-    .ca-pathway-card__body-inner ul li { margin-bottom: var(--space-1); }
-    .ca-pathway-card__body-inner strong { color: var(--color-text); }
+    @media (min-width: 640px) { .ca-pathway-grid { grid-template-columns: repeat(2, 1fr); } }.ca-pathway-card, .lm-progression-card, .ia-domain-card, .ia-standard-card, .mm-evidence-card, .bf-wellbeing-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }.ca-pathway-card:hover, .lm-progression-card:hover, .ia-domain-card:hover, .mm-evidence-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); }.ca-pathway-card__header, .ia-domain-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); cursor: pointer; transition: background var(--transition-fast); border: none; background: none; width: 100%; text-align: left; font-family: inherit; }.ca-pathway-card__header:hover, .ia-domain-card__header:hover, .bf-wellbeing-card__header:hover, .mm-relationship-card__header:hover, .mm-mobility-card__header:hover { background: var(--color-bg-subtle); }.ca-pathway-card__icon, .ia-domain-card__icon, .bf-wellbeing-card__icon { width: 36px; height: 36px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }.ca-pathway-card__title, .ia-domain-card__title, .mm-evidence-card__title, .bf-wellbeing-card__title, .mm-relationship-card__title, .mm-mobility-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }.ca-pathway-card__arrow, .ia-domain-card__arrow, .ia-standard-card__arrow, .mm-evidence-card__arrow, .bf-wellbeing-card__arrow, .mm-relationship-card__arrow, .mm-mobility-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }.ca-pathway-card--open .ca-pathway-card__arrow, .ia-domain-card--open .ia-domain-card__arrow, .ia-standard-card--open .ia-standard-card__arrow, .mm-evidence-card--open .mm-evidence-card__arrow, .bf-wellbeing-card--open .bf-wellbeing-card__arrow, .mm-relationship-card--open .mm-relationship-card__arrow, .mm-mobility-card--open .mm-mobility-card__arrow { transform: rotate(180deg); }.ca-pathway-card__body, .lm-progression-card__body, .ia-domain-card__body, .ia-standard-card__body, .mm-evidence-card__body, .bf-wellbeing-card__body, .mm-relationship-card__body, .mm-mobility-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }.ca-pathway-card__body-inner, .lm-progression-card__body-inner, .ia-domain-card__body-inner, .ia-standard-card__body-inner, .mm-evidence-card__body-inner, .bf-wellbeing-card__body-inner, .mm-relationship-card__body-inner, .mm-mobility-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }.ca-pathway-card__body-inner p, .lm-progression-card__body-inner p, .ia-domain-card__body-inner p, .ia-standard-card__body-inner p, .mm-evidence-card__body-inner p, .bf-wellbeing-card__body-inner p, .mm-relationship-card__body-inner p, .mm-mobility-card__body-inner p { margin-bottom: var(--space-2); }
+    .ca-pathway-card__body-inner ul { list-style: disc; padding-left: var(--space-5); margin-bottom: var(--space-2); }.ca-pathway-card__body-inner ul li, .lm-progression-card__body-inner ul li, .ia-domain-card__body-inner ul li { margin-bottom: var(--space-1); }.ca-pathway-card__body-inner strong, .lm-progression-card__body-inner strong, .ia-domain-card__body-inner strong, .mm-evidence-card__body-inner strong, .mm-relationship-card__body-inner strong, .mm-mobility-card__body-inner strong { color: var(--color-text); }
 
     .ca-industry-tabs .tabs__list { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
     .ca-industry-tabs .tabs__list::-webkit-scrollbar { display: none; }
@@ -1125,7 +790,6 @@
     /* .ca-summary-stat — unified in the Design System (Chapter Summary Stat) */
     /* .ca-summary-outcomes — unified in the Design System (Chapter Summary Outcomes) */
 
-
     /* ================================================
        LADDER MAPPING — Custom Styles
        ================================================ */
@@ -1136,7 +800,7 @@
     @media (min-width: 640px) { .lm-feature-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .lm-feature-grid { grid-template-columns: repeat(3, 1fr); } }
 
-    /* .lm-feature-card — unified in the Design System (Chapter Feature Card) */
+    /* Ladder Mapping feature cards use .chapter-feature-card (Design System) */
 
     .lm-ladder { position: relative; padding-left: 0; max-width: 700px; margin: 0 auto; }
     .lm-ladder::before { content: ''; position: absolute; left: 28px; top: 32px; bottom: 32px; width: 3px; background: var(--color-border); border-radius: 3px; z-index: 0; }
@@ -1164,20 +828,9 @@
 
     .lm-progression-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
     @media (min-width: 640px) { .lm-progression-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .lm-progression-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .lm-progression-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); }
-    .lm-progression-card__trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--space-4) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); text-align: left; gap: var(--space-3); transition: background var(--transition-fast); background: none; border: none; font-family: inherit; cursor: pointer; }
-    .lm-progression-card__trigger:hover { background: var(--color-bg-subtle); }
+    .lm-progression-card__trigger { display: flex; align-items: center; justify-content: space-between; width: 100%; padding: var(--space-4) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); text-align: left; gap: var(--space-3); transition: background var(--transition-fast); background: none; border: none; font-family: inherit; cursor: pointer; }.lm-progression-card__trigger:hover, .ia-standard-card__trigger:hover, .mm-evidence-card__trigger:hover { background: var(--color-bg-subtle); }
     .lm-progression-card__trigger-icon { flex-shrink: 0; color: var(--color-text-tertiary); transition: transform var(--transition-base); }
-    .lm-progression-card--open .lm-progression-card__trigger-icon { transform: rotate(180deg); }
-    .lm-progression-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .lm-progression-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .lm-progression-card__body-inner ul { list-style: disc; padding-left: var(--space-5); margin-top: var(--space-2); }
-    .lm-progression-card__body-inner ul li { margin-bottom: var(--space-1); }
-    .lm-progression-card__body-inner p { margin-bottom: var(--space-2); }
-    .lm-progression-card__body-inner p:last-child { margin-bottom: 0; }
-    .lm-progression-card__body-inner strong { color: var(--color-text); }
+    .lm-progression-card--open .lm-progression-card__trigger-icon { transform: rotate(180deg); }.lm-progression-card__body-inner ul, .ia-domain-card__body-inner ul { list-style: disc; padding-left: var(--space-5); margin-top: var(--space-2); }.lm-progression-card__body-inner p:last-child, .ia-domain-card__body-inner p:last-child, .ia-standard-card__body-inner p:last-child, .mm-evidence-card__body-inner p:last-child, .bf-wellbeing-card__body-inner p:last-child, .mm-relationship-card__body-inner p:last-child, .mm-mobility-card__body-inner p:last-child { margin-bottom: 0; }
 
     .lm-visualization { display: grid; grid-template-columns: 1fr; gap: var(--space-6); padding: var(--space-6) 0; }
     @media (min-width: 640px) { .lm-visualization { grid-template-columns: repeat(2, 1fr); } }
@@ -1255,7 +908,6 @@
     .lm-note-box__body-inner p:last-child { margin-bottom: 0; }
     .lm-note-box__body-inner strong { color: var(--color-text); }
 
-
     .lm-summary-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
     @media (min-width: 640px) { .lm-summary-grid { grid-template-columns: repeat(2, 1fr); } }
     /* .lm-summary-stat — unified in the Design System (Chapter Summary Stat) */
@@ -1270,27 +922,11 @@
     .ia-feature-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
     @media (min-width: 640px) { .ia-feature-grid { grid-template-columns: repeat(2, 1fr); } }
 
-    /* .ia-feature-card — unified in the Design System (Chapter Feature Card); 600px expand height preserved there */
+    /* Individual Assessment feature cards use .chapter-feature-card--compact (600px expand) */
 
     .ia-domain-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
     @media (min-width: 640px) { .ia-domain-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .ia-domain-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .ia-domain-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); }
-    .ia-domain-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); cursor: pointer; transition: background var(--transition-fast); border: none; background: none; width: 100%; text-align: left; font-family: inherit; }
-    .ia-domain-card__header:hover { background: var(--color-bg-subtle); }
-    .ia-domain-card__icon { width: 36px; height: 36px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .ia-domain-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
     .ia-domain-card__subtitle { font-size: var(--font-size-xs); color: var(--color-text-tertiary); display: block; font-weight: var(--font-weight-normal); }
-    .ia-domain-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .ia-domain-card--open .ia-domain-card__arrow { transform: rotate(180deg); }
-    .ia-domain-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .ia-domain-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .ia-domain-card__body-inner p { margin-bottom: var(--space-2); }
-    .ia-domain-card__body-inner p:last-child { margin-bottom: 0; }
-    .ia-domain-card__body-inner ul { list-style: disc; padding-left: var(--space-5); margin-top: var(--space-2); }
-    .ia-domain-card__body-inner ul li { margin-bottom: var(--space-1); }
-    .ia-domain-card__body-inner strong { color: var(--color-text); }
 
     .ia-dashboard { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-6); }
     .ia-dashboard__filter { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-5); }
@@ -1335,20 +971,9 @@
     .ia-scale-level__body-inner { padding-top: var(--space-3); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
 
     .ia-standards-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
-    @media (min-width: 640px) { .ia-standards-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .ia-standard-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .ia-standard-card:hover { border-color: var(--color-border); }
-    .ia-standard-card__trigger { display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-4) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); text-align: left; background: none; border: none; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }
-    .ia-standard-card__trigger:hover { background: var(--color-bg-subtle); }
-    .ia-standard-card__number { font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); color: var(--color-text-tertiary); flex-shrink: 0; }
+    @media (min-width: 640px) { .ia-standards-grid { grid-template-columns: repeat(2, 1fr); } }.ia-standard-card:hover, .bf-wellbeing-card:hover { border-color: var(--color-border); }
+    .ia-standard-card__trigger { display: flex; align-items: center; gap: var(--space-3); width: 100%; padding: var(--space-4) var(--space-5); font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); text-align: left; background: none; border: none; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }.ia-standard-card__number, .mm-evidence-card__number { font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); color: var(--color-text-tertiary); flex-shrink: 0; }
     .ia-standard-card__title { flex: 1; }
-    .ia-standard-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .ia-standard-card--open .ia-standard-card__arrow { transform: rotate(180deg); }
-    .ia-standard-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .ia-standard-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .ia-standard-card__body-inner p { margin-bottom: var(--space-2); }
-    .ia-standard-card__body-inner p:last-child { margin-bottom: 0; }
     .ia-standard-card__callout { display: flex; gap: var(--space-2); padding: var(--space-3); background: var(--color-info-bg); border-radius: var(--radius-md); margin-top: var(--space-3); font-size: var(--font-size-xs); color: var(--color-text-secondary); }
     .ia-standard-card__callout svg { flex-shrink: 0; color: var(--color-info); margin-top: 1px; }
     .ia-standard-card__callout strong { color: var(--color-text); }
@@ -1378,11 +1003,6 @@
     .ia-profile-stat__number { font-size: var(--font-size-xl); font-weight: var(--font-weight-extrabold); color: var(--color-primary); line-height: var(--line-height-tight); }
     .ia-profile-stat__label { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: var(--space-1); }
     .ia-profile-dashboard__chart { display: grid; grid-template-columns: 1fr; gap: var(--space-2); margin-top: var(--space-4); }
-    .ia-profile-chart-row { display: flex; align-items: center; gap: var(--space-3); }
-    .ia-profile-chart-row__label { font-size: var(--font-size-xs); color: var(--color-text-secondary); min-width: 80px; flex-shrink: 0; }
-    .ia-profile-chart-row__bar { flex: 1; height: 6px; background: var(--color-bg-subtle); border-radius: var(--radius-full); overflow: hidden; }
-    .ia-profile-chart-row__fill { height: 100%; border-radius: var(--radius-full); transition: width 1s cubic-bezier(0.4, 0, 0.2, 1); width: 0%; }
-    .ia-profile-chart-row__value { font-size: var(--font-size-xs); color: var(--color-text-tertiary); min-width: 30px; text-align: right; flex-shrink: 0; }
     .ia-profile-dashboard__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); padding-top: var(--space-4); border-top: 1px solid var(--color-border-light); }
 
     .ia-reflection-workspace { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-6); }
@@ -1421,7 +1041,6 @@
 
     /* .ia-summary-outcomes — unified in the Design System (Chapter Summary Outcomes) */
 
-
     /* ================================================
        INDIVIDUAL ASSESSMENT — Responsive tweaks
        ================================================ */
@@ -1441,25 +1060,11 @@
     @media (min-width: 640px) { .mm-feature-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .mm-feature-grid { grid-template-columns: repeat(3, 1fr); } }
 
-    /* .mm-feature-card — unified in the Design System (Chapter Feature Card) */
+    /* Mentoring & Mobility feature cards use .chapter-feature-card (Design System) */
 
     /* Relationship Explorer */
     .mm-relationship-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
-    @media (min-width: 640px) { .mm-relationship-grid { grid-template-columns: repeat(3, 1fr); } }
-
-    .mm-relationship-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); cursor: pointer; }
-    .mm-relationship-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
-    .mm-relationship-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); border: none; background: none; width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }
-    .mm-relationship-card__header:hover { background: var(--color-bg-subtle); }
-    .mm-relationship-card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .mm-relationship-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
-    .mm-relationship-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .mm-relationship-card--open .mm-relationship-card__arrow { transform: rotate(180deg); }
-    .mm-relationship-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .mm-relationship-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .mm-relationship-card__body-inner p { margin-bottom: var(--space-2); }
-    .mm-relationship-card__body-inner p:last-child { margin-bottom: 0; }
-    .mm-relationship-card__body-inner strong { color: var(--color-text); }
+    @media (min-width: 640px) { .mm-relationship-grid { grid-template-columns: repeat(3, 1fr); } }.mm-relationship-card, .mm-mobility-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); cursor: pointer; }.mm-relationship-card:hover, .mm-mobility-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(-2px); }.bf-wellbeing-card__header, .mm-relationship-card__header, .mm-mobility-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); border: none; background: none; width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }.mm-relationship-card__icon, .mm-mobility-card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 
     /* Relationship Comparison Tabs */
     .mm-compare-tabs .tabs__list { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
@@ -1475,20 +1080,6 @@
     .mm-mobility-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
     @media (min-width: 640px) { .mm-mobility-grid { grid-template-columns: repeat(2, 1fr); } }
     @media (min-width: 1024px) { .mm-mobility-grid { grid-template-columns: repeat(3, 1fr); } }
-
-    .mm-mobility-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); cursor: pointer; }
-    .mm-mobility-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); transform: translateY(-2px); }
-    .mm-mobility-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); border: none; background: none; width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }
-    .mm-mobility-card__header:hover { background: var(--color-bg-subtle); }
-    .mm-mobility-card__icon { width: 40px; height: 40px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .mm-mobility-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
-    .mm-mobility-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .mm-mobility-card--open .mm-mobility-card__arrow { transform: rotate(180deg); }
-    .mm-mobility-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .mm-mobility-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .mm-mobility-card__body-inner p { margin-bottom: var(--space-2); }
-    .mm-mobility-card__body-inner p:last-child { margin-bottom: 0; }
-    .mm-mobility-card__body-inner strong { color: var(--color-text); }
 
     /* Network Builder Workspace */
     .mm-network-workspace { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); padding: var(--space-6); }
@@ -1517,7 +1108,6 @@
     .mm-network-map__connector { width: 2px; height: 16px; background: var(--color-border); flex-shrink: 0; }
     .mm-network-map__connector--animated { height: 20px; background: linear-gradient(to bottom, var(--color-primary), var(--color-border)); animation: mm-pulse 1.8s ease-in-out infinite; }
     @keyframes mm-pulse { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
-    .mm-network-map__label { font-size: var(--font-size-xs); color: var(--color-text-tertiary); margin-top: var(--space-1); }
     .mm-network-map__badge { position: absolute; right: -8px; top: -8px; font-size: var(--font-size-xs); background: var(--color-primary); color: #fff; border-radius: var(--radius-full); padding: 1px 6px; font-weight: var(--font-weight-bold); }
 
     /* Mobility Timeline */
@@ -1550,27 +1140,13 @@
     /* Completion Evidence */
     .mm-evidence-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-4); }
     @media (min-width: 640px) { .mm-evidence-grid { grid-template-columns: repeat(2, 1fr); } }
-
-    .mm-evidence-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .mm-evidence-card:hover { border-color: var(--color-border); box-shadow: var(--shadow-sm); }
     .mm-evidence-card__trigger { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); border: none; background: none; width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }
-    .mm-evidence-card__trigger:hover { background: var(--color-bg-subtle); }
-    .mm-evidence-card__number { font-size: var(--font-size-xs); font-weight: var(--font-weight-bold); color: var(--color-text-tertiary); flex-shrink: 0; }
-    .mm-evidence-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
-    .mm-evidence-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .mm-evidence-card--open .mm-evidence-card__arrow { transform: rotate(180deg); }
-    .mm-evidence-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .mm-evidence-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .mm-evidence-card__body-inner p { margin-bottom: var(--space-2); }
-    .mm-evidence-card__body-inner p:last-child { margin-bottom: 0; }
-    .mm-evidence-card__body-inner strong { color: var(--color-text); }
 
     /* Summary */
     .mm-summary-grid { display: grid; grid-template-columns: 1fr; gap: var(--space-5); }
     @media (min-width: 640px) { .mm-summary-grid { grid-template-columns: repeat(2, 1fr); } }
     /* .mm-summary-stat — unified in the Design System (Chapter Summary Stat) */
     /* .mm-summary-outcomes — unified in the Design System (Chapter Summary Outcomes) */
-
 
     /* Responsive tweaks for MM */
     @media (max-width: 480px) {
@@ -1688,18 +1264,6 @@
 
     .bf-wellbeing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-4); }
     @media (max-width: 640px) { .bf-wellbeing-grid { grid-template-columns: 1fr; } }
-    .bf-wellbeing-card { background: var(--color-bg-elevated); border: 1px solid var(--color-border-light); border-radius: var(--radius-lg); overflow: hidden; transition: all var(--transition-base); }
-    .bf-wellbeing-card:hover { border-color: var(--color-border); }
-    .bf-wellbeing-card__header { display: flex; align-items: center; gap: var(--space-3); padding: var(--space-4) var(--space-5); border: none; background: none; width: 100%; text-align: left; font-family: inherit; cursor: pointer; transition: background var(--transition-fast); }
-    .bf-wellbeing-card__header:hover { background: var(--color-bg-subtle); }
-    .bf-wellbeing-card__icon { width: 36px; height: 36px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .bf-wellbeing-card__title { font-size: var(--font-size-sm); font-weight: var(--font-weight-semibold); color: var(--color-text); flex: 1; }
-    .bf-wellbeing-card__arrow { color: var(--color-text-tertiary); transition: transform var(--transition-base); flex-shrink: 0; }
-    .bf-wellbeing-card--open .bf-wellbeing-card__arrow { transform: rotate(180deg); }
-    .bf-wellbeing-card__body { max-height: 0; overflow: hidden; transition: max-height var(--transition-slow); }
-    .bf-wellbeing-card__body-inner { padding: 0 var(--space-5) var(--space-5); font-size: var(--font-size-sm); color: var(--color-text-secondary); line-height: var(--line-height-normal); }
-    .bf-wellbeing-card__body-inner p { margin-bottom: var(--space-2); }
-    .bf-wellbeing-card__body-inner p:last-child { margin-bottom: 0; }
 
     .bf-portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
     @media (max-width: 768px) { .bf-portfolio-grid { grid-template-columns: 1fr 1fr; } }
@@ -2183,9 +1747,6 @@
     text-decoration: line-through;
     color: var(--color-text-tertiary);
 }
-.ap-c-item--hidden {
-    display: none;
-}
 .ap-c-item__checkbox {
     flex-shrink: 0;
     width: 22px;
@@ -2469,7 +2030,7 @@
     /* ================================================
        MY CAREER DASHBOARD — additive styles only
        (everything else in this section reuses existing
-       classes: .ca-hero, .ca-sticky-nav, .dashboard-preview,
+       classes: .ca-hero, .sticky-nav, .dashboard-preview,
        .ca-summary-grid, .ap-nav-grid/.ap-nav-card,
        .journey-card, .bf-portfolio-grid/.bf-portfolio-card,
        .ap-workspace, .badge, .btn)
@@ -2842,17 +2403,17 @@
             <!-- ============================================================ -->
             <section class="section" id="career-dashboard" data-section="career-dashboard">
 
-                <!-- Sticky sub-navigation (reuses .ca-sticky-nav__item so the
+                <!-- Sticky sub-navigation (reuses .sticky-nav__item so the
                      existing delegated click handler wires it automatically) -->
-                <nav class="ca-sticky-nav" id="cdStickyNav" aria-label="My Career Dashboard sections">
-                    <button class="ca-sticky-nav__item ca-sticky-nav__item--active" data-target="cd-hero">Overview</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-stages">Completed Stages</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-widgets">Dashboard Widgets</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-progress">Progress Dashboard</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-actions">Quick Actions</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-timeline">Journey Timeline</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-reflection">Final Reflection</button>
-                    <button class="ca-sticky-nav__item" data-target="cd-achievements">Achievements</button>
+                <nav class="sticky-nav" id="cdStickyNav" aria-label="My Career Dashboard sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="cd-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="cd-stages">Completed Stages</button>
+                    <button class="sticky-nav__item" data-target="cd-widgets">Dashboard Widgets</button>
+                    <button class="sticky-nav__item" data-target="cd-progress">Progress Dashboard</button>
+                    <button class="sticky-nav__item" data-target="cd-actions">Quick Actions</button>
+                    <button class="sticky-nav__item" data-target="cd-timeline">Journey Timeline</button>
+                    <button class="sticky-nav__item" data-target="cd-reflection">Final Reflection</button>
+                    <button class="sticky-nav__item" data-target="cd-achievements">Achievements</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner (reuses .ca-hero) -->
@@ -3037,21 +2598,21 @@
             <section class="section" id="career-awareness" data-section="career-awareness">
 
                 <!-- Sticky sub-navigation -->
-                <nav class="ca-sticky-nav" id="caStickyNav" aria-label="Career Awareness sections">
-                    <button class="ca-sticky-nav__item ca-sticky-nav__item--active" data-target="ca-hero">Overview</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-why">Why This Matters</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-explore">Explore HR</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-pathways">Pathways</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-industries">Industries</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-emerging">Emerging Roles</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-ethics">Ethics</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-activities">Activities</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-reflection">Reflection</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-map">Pathway Map</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-requirements">Requirements</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-insight">Facilitator</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-resources">Resources</button>
-                    <button class="ca-sticky-nav__item" data-target="ca-summary">Summary</button>
+                <nav class="sticky-nav" id="caStickyNav" aria-label="Career Awareness sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="ca-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="ca-why">Why This Matters</button>
+                    <button class="sticky-nav__item" data-target="ca-explore">Explore HR</button>
+                    <button class="sticky-nav__item" data-target="ca-pathways">Pathways</button>
+                    <button class="sticky-nav__item" data-target="ca-industries">Industries</button>
+                    <button class="sticky-nav__item" data-target="ca-emerging">Emerging Roles</button>
+                    <button class="sticky-nav__item" data-target="ca-ethics">Ethics</button>
+                    <button class="sticky-nav__item" data-target="ca-activities">Activities</button>
+                    <button class="sticky-nav__item" data-target="ca-reflection">Reflection</button>
+                    <button class="sticky-nav__item" data-target="ca-map">Pathway Map</button>
+                    <button class="sticky-nav__item" data-target="ca-requirements">Requirements</button>
+                    <button class="sticky-nav__item" data-target="ca-insight">Facilitator</button>
+                    <button class="sticky-nav__item" data-target="ca-resources">Resources</button>
+                    <button class="sticky-nav__item" data-target="ca-summary">Summary</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner -->
@@ -3094,40 +2655,40 @@
                         <p class="section__description">The HR profession has become broader and more specialized. Career awareness gives you the foundation to make informed decisions about your future.</p>
                     </div>
                     <div class="ca-feature-grid">
-                        <div class="ca-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ca-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="ca-feature-card__title">The HR Landscape</div>
-                            <div class="ca-feature-card__preview">HR careers have become broader and more specialized. Alongside recruitment and administration, employers increasingly need capability in employee experience, wellbeing, people analytics, HR technology, responsible AI, workforce planning, organizational development, and strategic partnering.</div>
-                            <div class="ca-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">The HR Landscape</div>
+                            <div class="chapter-feature-card__preview">HR careers have become broader and more specialized. Alongside recruitment and administration, employers increasingly need capability in employee experience, wellbeing, people analytics, HR technology, responsible AI, workforce planning, organizational development, and strategic partnering.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>This breadth creates both opportunity and confusion for junior professionals. The Career Awareness stage helps you see the full landscape so you can navigate it with confidence.</p>
                             </div>
-                            <button class="ca-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="ca-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ca-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="ca-feature-card__title">The Challenge</div>
-                            <div class="ca-feature-card__preview">Junior professionals often encounter fragmented advice, inconsistent job titles, limited mentoring, and unclear progression standards. This makes it hard to know which direction to pursue or how to position yourself credibly.</div>
-                            <div class="ca-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">The Challenge</div>
+                            <div class="chapter-feature-card__preview">Junior professionals often encounter fragmented advice, inconsistent job titles, limited mentoring, and unclear progression standards. This makes it hard to know which direction to pursue or how to position yourself credibly.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>The Career Awareness stage addresses this by providing structured, practical guidance that cuts through the noise. You'll learn how roles connect, what employers expect, and how to evaluate which path is right for you.</p>
                             </div>
-                            <button class="ca-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="ca-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ca-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-                            <div class="ca-feature-card__title">What You'll Gain</div>
-                            <div class="ca-feature-card__preview">By the end of this stage, you'll understand the purpose and value of HR, identify the range of career opportunities available, explore different pathways, and begin to see where your strengths and interests align.</div>
-                            <div class="ca-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">What You'll Gain</div>
+                            <div class="chapter-feature-card__preview">By the end of this stage, you'll understand the purpose and value of HR, identify the range of career opportunities available, explore different pathways, and begin to see where your strengths and interests align.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>You'll complete the HR Career Pathway Map — a visual comparison of HR directions with personal fit analysis and pathway selection. This becomes the foundation for the rest of your HR CLIMB journey.</p>
                             </div>
-                            <button class="ca-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
@@ -3842,17 +3403,17 @@
             <section class="section" id="ladder-mapping" data-section="ladder-mapping">
 
                 <!-- Sticky sub-navigation -->
-                <nav class="lm-sticky-nav" id="lmStickyNav" aria-label="Ladder Mapping sections">
-                    <button class="lm-sticky-nav__item lm-sticky-nav__item--active" data-target="lm-hero">Overview</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-why">Why It Matters</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-ladder">Career Ladder</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-progression">Progression Explorer</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-visualization">Competency Growth</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-gap">Gap Analysis</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-roadmap">Career Ladder Map</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-activities">Activities</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-notes">Important Notes</button>
-                    <button class="lm-sticky-nav__item" data-target="lm-summary">Summary</button>
+                <nav class="sticky-nav" id="lmStickyNav" aria-label="Ladder Mapping sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="lm-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="lm-why">Why It Matters</button>
+                    <button class="sticky-nav__item" data-target="lm-ladder">Career Ladder</button>
+                    <button class="sticky-nav__item" data-target="lm-progression">Progression Explorer</button>
+                    <button class="sticky-nav__item" data-target="lm-visualization">Competency Growth</button>
+                    <button class="sticky-nav__item" data-target="lm-gap">Gap Analysis</button>
+                    <button class="sticky-nav__item" data-target="lm-roadmap">Career Ladder Map</button>
+                    <button class="sticky-nav__item" data-target="lm-activities">Activities</button>
+                    <button class="sticky-nav__item" data-target="lm-notes">Important Notes</button>
+                    <button class="sticky-nav__item" data-target="lm-summary">Summary</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner -->
@@ -3895,40 +3456,40 @@
                         <p class="section__description">Understanding what changes at each career level helps you plan your development and position yourself for progression.</p>
                     </div>
                     <div class="lm-feature-grid">
-                        <div class="lm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="lm-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="lm-feature-card__title">Visibility of Progression</div>
-                            <div class="lm-feature-card__preview">Career progression is not just about job titles. It's about what changes in scope, judgment, independence, influence, and accountability between career levels.</div>
-                            <div class="lm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Visibility of Progression</div>
+                            <div class="chapter-feature-card__preview">Career progression is not just about job titles. It's about what changes in scope, judgment, independence, influence, and accountability between career levels.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Ladder Mapping helps you see the full picture of what progression really means — from the scope of your work to the level of influence you have. This visibility allows you to target your development efforts more precisely.</p>
                             </div>
-                            <button class="lm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="lm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="lm-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="lm-feature-card__title">From Current to Target</div>
-                            <div class="lm-feature-card__preview">By comparing your current role or experience with a realistic next role and a longer-term target role, you can identify exactly what you need to develop.</div>
-                            <div class="lm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">From Current to Target</div>
+                            <div class="chapter-feature-card__preview">By comparing your current role or experience with a realistic next role and a longer-term target role, you can identify exactly what you need to develop.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>This stage helps you answer the question: "What do I need to demonstrate to be credible for my next role?" You'll map the gap between where you are and where you want to be, making your development plan concrete and achievable.</p>
                             </div>
-                            <button class="lm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="lm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="lm-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-                            <div class="lm-feature-card__title">Evidence-Based Planning</div>
-                            <div class="lm-feature-card__preview">Your Career Ladder Map records required knowledge, behaviours, experience, qualifications, evidence, and an estimated development timeline.</div>
-                            <div class="lm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Evidence-Based Planning</div>
+                            <div class="chapter-feature-card__preview">Your Career Ladder Map records required knowledge, behaviours, experience, qualifications, evidence, and an estimated development timeline.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>This creates a structured, evidence-based approach to career planning. Instead of vague aspirations, you'll have a clear document that shows what you need, what you already have, and how to close the gap.</p>
                             </div>
-                            <button class="lm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
@@ -4371,18 +3932,18 @@
             <section class="section" id="individual-assessment" data-section="individual-assessment">
 
                 <!-- Sticky sub-navigation -->
-                <nav class="ia-sticky-nav" id="iaStickyNav" aria-label="Individual Assessment sections">
-                    <button class="ia-sticky-nav__item ia-sticky-nav__item--active" data-target="ia-hero">Overview</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-why">Why It Matters</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-domains">Competency Domains</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-dashboard">Dashboard</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-scale">Rating Scale</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-standards">Standards</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-strengths">Strengths &amp; Gaps</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-profile">Profile</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-reflection">Reflection</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-evidence">Completion Evidence</button>
-                    <button class="ia-sticky-nav__item" data-target="ia-summary">Summary</button>
+                <nav class="sticky-nav" id="iaStickyNav" aria-label="Individual Assessment sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="ia-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="ia-why">Why It Matters</button>
+                    <button class="sticky-nav__item" data-target="ia-domains">Competency Domains</button>
+                    <button class="sticky-nav__item" data-target="ia-dashboard">Dashboard</button>
+                    <button class="sticky-nav__item" data-target="ia-scale">Rating Scale</button>
+                    <button class="sticky-nav__item" data-target="ia-standards">Standards</button>
+                    <button class="sticky-nav__item" data-target="ia-strengths">Strengths &amp; Gaps</button>
+                    <button class="sticky-nav__item" data-target="ia-profile">Profile</button>
+                    <button class="sticky-nav__item" data-target="ia-reflection">Reflection</button>
+                    <button class="sticky-nav__item" data-target="ia-evidence">Completion Evidence</button>
+                    <button class="sticky-nav__item" data-target="ia-summary">Summary</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner -->
@@ -4428,53 +3989,53 @@
                         <p class="section__description">Evidence-based self-assessment helps you understand your current capability, identify development priorities, and make credible career decisions.</p>
                     </div>
                     <div class="ia-feature-grid">
-                        <div class="ia-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ia-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="ia-feature-card__title">Evidence-Based Decisions</div>
-                            <div class="ia-feature-card__preview">Every rating should be supported by an example, work product, result, feedback, or observed behaviour. This creates a credible foundation for career planning.</div>
-                            <div class="ia-feature-card__expand">
+                        <div class="chapter-feature-card chapter-feature-card--compact" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Evidence-Based Decisions</div>
+                            <div class="chapter-feature-card__preview">Every rating should be supported by an example, work product, result, feedback, or observed behaviour. This creates a credible foundation for career planning.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Self-assessment is most valuable when it is grounded in real evidence. Rather than guessing your capability, you can point to specific examples that demonstrate your competence. This approach builds confidence and provides a clear basis for development conversations with managers and mentors.</p>
                             </div>
-                            <button class="ia-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="ia-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ia-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="ia-feature-card__title">Identify Strengths &amp; Gaps</div>
-                            <div class="ia-feature-card__preview">Participants should identify three significant strengths and three priority gaps. Focusing on the few gaps that matter most for the next role is more effective than trying to improve everything at once.</div>
-                            <div class="ia-feature-card__expand">
+                        <div class="chapter-feature-card chapter-feature-card--compact" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Identify Strengths &amp; Gaps</div>
+                            <div class="chapter-feature-card__preview">Participants should identify three significant strengths and three priority gaps. Focusing on the few gaps that matter most for the next role is more effective than trying to improve everything at once.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Career development is most effective when it is targeted. By identifying a small number of high-impact strengths and gaps, you can direct your energy toward the areas that will make the biggest difference in your progression. This focused approach reduces overwhelm and accelerates meaningful growth.</p>
                             </div>
-                            <button class="ia-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="ia-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ia-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-                            <div class="ia-feature-card__title">External Feedback</div>
-                            <div class="ia-feature-card__preview">Self-assessment should be compared with feedback from a manager, mentor, or trusted colleague where feasible. This provides a more complete and balanced view of your capability.</div>
-                            <div class="ia-feature-card__expand">
+                        <div class="chapter-feature-card chapter-feature-card--compact" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">External Feedback</div>
+                            <div class="chapter-feature-card__preview">Self-assessment should be compared with feedback from a manager, mentor, or trusted colleague where feasible. This provides a more complete and balanced view of your capability.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Our self-perceptions are not always perfectly aligned with how others experience our work. Seeking feedback from people who observe your performance provides valuable perspective and helps you identify blind spots. This external input strengthens the credibility of your assessment and enriches your development plan.</p>
                             </div>
-                            <button class="ia-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="ia-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="ia-feature-card__icon" style="background:var(--color-tip-bg);color:var(--color-tip)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 11h6M11 8v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-                            <div class="ia-feature-card__title">Years Are Not Proof</div>
-                            <div class="ia-feature-card__preview">Years of service and job title are context, not proof of competence. Competence is demonstrated through specific examples and evidence of capability, not time spent in a role.</div>
-                            <div class="ia-feature-card__expand">
+                        <div class="chapter-feature-card chapter-feature-card--compact" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-tip-bg);color:var(--color-tip)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="3" y="3" width="16" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 11h6M11 8v6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Years Are Not Proof</div>
+                            <div class="chapter-feature-card__preview">Years of service and job title are context, not proof of competence. Competence is demonstrated through specific examples and evidence of capability, not time spent in a role.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Many professionals assume that time in a role automatically equates to competence. However, two people with the same job title and tenure can have very different levels of capability. Evidence-based assessment focuses on what you can actually do and demonstrate, not how long you have been doing it.</p>
                             </div>
-                            <button class="ia-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
@@ -4991,18 +4552,18 @@
             <section class="section" id="mentoring-mobility" data-section="mentoring-mobility">
 
                 <!-- Sticky sub-navigation -->
-                <nav class="mm-sticky-nav" id="mmStickyNav" aria-label="Mentoring & Mobility sections">
-                    <button class="mm-sticky-nav__item mm-sticky-nav__item--active" data-target="mm-hero">Overview</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-why">Why It Matters</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-relationships">Relationships</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-compare">Comparison</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-mobility">Mobility Explorer</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-network">Network Builder</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-map">Network Map</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-timeline">Mobility Journey</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-activities">Activities</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-evidence">Completion Evidence</button>
-                    <button class="mm-sticky-nav__item" data-target="mm-summary">Summary</button>
+                <nav class="sticky-nav" id="mmStickyNav" aria-label="Mentoring & Mobility sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="mm-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="mm-why">Why It Matters</button>
+                    <button class="sticky-nav__item" data-target="mm-relationships">Relationships</button>
+                    <button class="sticky-nav__item" data-target="mm-compare">Comparison</button>
+                    <button class="sticky-nav__item" data-target="mm-mobility">Mobility Explorer</button>
+                    <button class="sticky-nav__item" data-target="mm-network">Network Builder</button>
+                    <button class="sticky-nav__item" data-target="mm-map">Network Map</button>
+                    <button class="sticky-nav__item" data-target="mm-timeline">Mobility Journey</button>
+                    <button class="sticky-nav__item" data-target="mm-activities">Activities</button>
+                    <button class="sticky-nav__item" data-target="mm-evidence">Completion Evidence</button>
+                    <button class="sticky-nav__item" data-target="mm-summary">Summary</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner -->
@@ -5048,40 +4609,40 @@
                         <p class="section__description">Developmental relationships and career mobility are essential for building a sustainable, fulfilling HR career.</p>
                     </div>
                     <div class="mm-feature-grid">
-                        <div class="mm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="mm-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="mm-feature-card__title">Build Developmental Relationships</div>
-                            <div class="mm-feature-card__preview">Mentors, coaches, and sponsors provide guidance, feedback, visibility, and access to appropriate opportunities that accelerate career growth.</div>
-                            <div class="mm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-info-bg);color:var(--color-info)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M11 7.5v4l2.5 1.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Build Developmental Relationships</div>
+                            <div class="chapter-feature-card__preview">Mentors, coaches, and sponsors provide guidance, feedback, visibility, and access to appropriate opportunities that accelerate career growth.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Developmental relationships are among the most powerful drivers of career progression. Mentors share career perspective and ask reflective questions. Coaches support defined performance or development goals through structured inquiry. Sponsors use influence to increase visibility and advocate for appropriate opportunities.</p>
                             </div>
-                            <button class="mm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="mm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="mm-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-                            <div class="mm-feature-card__title">Gain Career-Building Exposure</div>
-                            <div class="mm-feature-card__preview">Career growth extends beyond formal promotion. Lateral moves, cross-industry experiences, projects, and stretch assignments build capability and broaden your professional perspective.</div>
-                            <div class="mm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-warning-bg);color:var(--color-warning)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M3 11l4-5 3 3.5L19 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Gain Career-Building Exposure</div>
+                            <div class="chapter-feature-card__preview">Career growth extends beyond formal promotion. Lateral moves, cross-industry experiences, projects, and stretch assignments build capability and broaden your professional perspective.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>Mobility takes many forms — vertical progression, lateral movement into new specializations, cross-industry transitions, geographical moves, project assignments, and stretch responsibilities. Each form of mobility builds new skills, expands your network, and increases your professional resilience.</p>
                             </div>
-                            <button class="mm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
                         </div>
 
-                        <div class="mm-feature-card" role="button" tabindex="0" aria-expanded="false">
-                            <div class="mm-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
-                            <div class="mm-feature-card__title">Create Your Professional Support System</div>
-                            <div class="mm-feature-card__preview">A strong network of mentors, sponsors, peers, and industry connections provides guidance, encouragement, feedback, and access to opportunities throughout your career.</div>
-                            <div class="mm-feature-card__expand">
+                        <div class="chapter-feature-card" role="button" tabindex="0" aria-expanded="false">
+                            <div class="chapter-feature-card__icon" style="background:var(--color-success-bg);color:var(--color-success)"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M11 3l2.5 5 5.5.8-4 3.9.9 5.5L11 14.7l-4.9 2.5.9-5.5-4-3.9 5.5-.8L11 3z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+                            <div class="chapter-feature-card__title">Create Your Professional Support System</div>
+                            <div class="chapter-feature-card__preview">A strong network of mentors, sponsors, peers, and industry connections provides guidance, encouragement, feedback, and access to opportunities throughout your career.</div>
+                            <div class="chapter-feature-card__expand">
                                 <p>You'll prepare a Professional Support Network Map, mentoring engagement plan, networking action plan, and chosen mobility opportunity. Networking must be relationship-based and ethical, not transactional or limited to requesting vacancies.</p>
                             </div>
-                            <button class="mm-feature-card__trigger" aria-label="Read more">
+                            <button class="chapter-feature-card__trigger" aria-label="Read more">
                                 <span>Read more</span>
                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 5l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </button>
@@ -5655,18 +5216,18 @@
             <section class="section" id="building-future" data-section="building-future">
 
                 <!-- Sticky sub-navigation -->
-                <nav class="bf-sticky-nav" id="bfStickyNav" aria-label="Building the Future sections">
-                    <button class="bf-sticky-nav__item bf-sticky-nav__item--active" data-target="bf-hero">Overview</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-journey">Your Journey</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-roadmap">Roadmap Builder</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-actions">Action Explorer</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-timeline">Timeline</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-dashboard">Dashboard</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-actionplan">Action Plan</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-wellbeing">Wellbeing</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-portfolio">Portfolio</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-reflection">Reflection</button>
-                    <button class="bf-sticky-nav__item" data-target="bf-summary">Summary</button>
+                <nav class="sticky-nav sticky-nav--danger" id="bfStickyNav" aria-label="Building the Future sections">
+                    <button class="sticky-nav__item sticky-nav__item--active" data-target="bf-hero">Overview</button>
+                    <button class="sticky-nav__item" data-target="bf-journey">Your Journey</button>
+                    <button class="sticky-nav__item" data-target="bf-roadmap">Roadmap Builder</button>
+                    <button class="sticky-nav__item" data-target="bf-actions">Action Explorer</button>
+                    <button class="sticky-nav__item" data-target="bf-timeline">Timeline</button>
+                    <button class="sticky-nav__item" data-target="bf-dashboard">Dashboard</button>
+                    <button class="sticky-nav__item" data-target="bf-actionplan">Action Plan</button>
+                    <button class="sticky-nav__item" data-target="bf-wellbeing">Wellbeing</button>
+                    <button class="sticky-nav__item" data-target="bf-portfolio">Portfolio</button>
+                    <button class="sticky-nav__item" data-target="bf-reflection">Reflection</button>
+                    <button class="sticky-nav__item" data-target="bf-summary">Summary</button>
                 </nav>
 
                 <!-- SECTION 01: Hero Banner -->
@@ -6469,15 +6030,15 @@ APPENDICES & TEMPLATES — FULL CHAPTER
 <section class="section" id="appendix" data-section="appendix">
 
     <!-- Sticky sub-navigation -->
-    <nav class="ap-sticky-nav" id="apStickyNav" aria-label="Appendices sections">
-        <button class="ap-sticky-nav__item ap-sticky-nav__item--active" data-target="ap-hero">Overview</button>
-        <button class="ap-sticky-nav__item" data-target="ap-navigator">Navigator</button>
-        <button class="ap-sticky-nav__item" data-target="ap-a">Appendix A</button>
-        <button class="ap-sticky-nav__item" data-target="ap-b">Appendix B</button>
-        <button class="ap-sticky-nav__item" data-target="ap-c">Appendix C</button>
-        <button class="ap-sticky-nav__item" data-target="ap-portfolio">Portfolio</button>
-        <button class="ap-sticky-nav__item" data-target="ap-utilities">Utilities</button>
-        <button class="ap-sticky-nav__item" data-target="ap-summary">Summary</button>
+    <nav class="sticky-nav" id="apStickyNav" aria-label="Appendices sections">
+        <button class="sticky-nav__item sticky-nav__item--active" data-target="ap-hero">Overview</button>
+        <button class="sticky-nav__item" data-target="ap-navigator">Navigator</button>
+        <button class="sticky-nav__item" data-target="ap-a">Appendix A</button>
+        <button class="sticky-nav__item" data-target="ap-b">Appendix B</button>
+        <button class="sticky-nav__item" data-target="ap-c">Appendix C</button>
+        <button class="sticky-nav__item" data-target="ap-portfolio">Portfolio</button>
+        <button class="sticky-nav__item" data-target="ap-utilities">Utilities</button>
+        <button class="sticky-nav__item" data-target="ap-summary">Summary</button>
     </nav>
 
     <!-- SECTION 01: Hero Banner -->
@@ -7107,11 +6668,8 @@ APPENDICES & TEMPLATES — FULL CHAPTER
                 document.querySelectorAll('.floating-nav__item').forEach(function (item) {
                     item.classList.toggle('floating-nav__item--active', item.getAttribute('data-target') === chapterId);
                 });
-                document.querySelectorAll('[class*="-sticky-nav__item"]').forEach(function (item) {
-                    var m = item.className.match(/(^|\s)([a-z]+)-sticky-nav__item(\s|$)/);
-                    if (!m) return;
-                    var prefix = m[2];
-                    item.classList.toggle(prefix + '-sticky-nav__item--active', item.getAttribute('data-target') === id);
+                document.querySelectorAll('.sticky-nav__item').forEach(function (item) {
+                    item.classList.toggle('sticky-nav__item--active', item.getAttribute('data-target') === id);
                 });
             }
 
@@ -7293,7 +6851,7 @@ APPENDICES & TEMPLATES — FULL CHAPTER
 
         /* ---- Sticky Nav clicks for all chapters (including Appendix, which
                previously had no click wiring at all) ---- */
-        document.querySelectorAll('.ca-sticky-nav__item, .lm-sticky-nav__item, .ia-sticky-nav__item, .mm-sticky-nav__item, .bf-sticky-nav__item, .ap-sticky-nav__item').forEach(function (item) {
+        document.querySelectorAll('.sticky-nav__item').forEach(function (item) {
             item.addEventListener('click', function () {
                 navigateToSection(this.getAttribute('data-target'));
             });
@@ -8489,14 +8047,11 @@ APPENDICES & TEMPLATES — FULL CHAPTER
            1. ACCORDIONS — "whole card is the button" pattern
            ================================================================ */
         [
-            ['.ca-feature-card', 'ca-feature-card--expanded'],
+            ['.chapter-feature-card', 'chapter-feature-card--expanded'],
             ['.ca-emerging-card', 'ca-emerging-card--expanded'],
             ['.ca-pathway-map__item', 'ca-pathway-map__item--expanded'],
-            ['.lm-feature-card', 'lm-feature-card--expanded'],
             ['.lm-roadmap__item', 'lm-roadmap__item--expanded'],
-            ['.ia-feature-card', 'ia-feature-card--expanded'],
-            ['.ia-domain-card', 'ia-domain-card--open'],
-            ['.mm-feature-card', 'mm-feature-card--expanded']
+            ['.ia-domain-card', 'ia-domain-card--open']
         ].forEach(function (pair) {
             document.querySelectorAll(pair[0]).forEach(function (el) {
                 makeSelfToggleable(el, pair[1]);
